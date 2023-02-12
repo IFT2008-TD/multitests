@@ -1,4 +1,4 @@
-
+# Tests de la classe Tuba
 
 set(TEST_TUBA_SOURCES tests_tuba.cpp ${PROJECT_SOURCE_DIR}/Tuba.cpp)
 
@@ -16,6 +16,8 @@ target_link_libraries(
         pthread
 )
 
+# Tests de la classe Trompette
+
 set(TEST_TROMPETTE_SOURCES tests_trompette.cpp ${PROJECT_SOURCE_DIR}/Trompette.cpp ${PROJECT_SOURCE_DIR}/Tuba.cpp)
 
 add_executable(
@@ -32,7 +34,7 @@ target_link_libraries(
         pthread
 )
 
-
+# Inclure googletests et détecter les tests dans les deux exécutables
 
 include(GoogleTest)
 gtest_discover_tests(tests_trompette)
